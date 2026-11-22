@@ -81,6 +81,8 @@ docker logs neufology-demo
 
 `docker ps` lists running containers. The log should include:
 
+If you already have other containers, add `--filter name=neufology-demo` to `docker ps` or `docker ps -a` to focus the list on this lesson's container. The video uses this filter on its recording machine.
+
 ```text
 Neufology app is listening on port 3000
 ```
