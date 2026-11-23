@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My first Docker app · Neufology</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: #eceeec; color: #172128;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      display: grid; place-items: center; padding: 48px; }
+    main { width: min(1080px, 100%); }
+    header { display: flex; justify-content: space-between; align-items: center;
+      padding-bottom: 26px; border-bottom: 1px solid #b9c1c4; }
+    .brand { font-size: 20px; font-weight: 800; letter-spacing: .13em; }
+    .part { font-size: 17px; color: #4f5c63; }
+    .status { display: inline-flex; align-items: center; gap: 10px; margin-top: 64px;
+      padding: 9px 15px; border: 1px solid #b4c9c0; border-radius: 30px;
+      color: #235b46; font-size: 17px; font-weight: 650; }
+    .status::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: #2c875e; }
+    h1 { max-width: 1000px; font-size: clamp(44px, 5.8vw, 78px); line-height: 1.08;
+      letter-spacing: -.045em; margin: 26px 0 24px; }
+    .intro { max-width: 790px; color: #4f5c63; font-size: 25px; line-height: 1.5; margin: 0; }
+    .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 50px 0 36px; }
+    .fact { border: 1px solid #c7cecf; padding: 24px 25px; border-radius: 14px; background: #f8f9f7; }
+    .label { display: block; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: #5c6870; margin-bottom: 10px; }
+    .value { font-size: 28px; font-weight: 700; letter-spacing: -.02em; }
+    footer { font-size: 18px; color: #4f5c63; }
+    footer strong { color: #007f9c; }
+    @media (max-width: 650px) { body { padding: 24px; } header { align-items: flex-start; gap: 20px; }
+      .status { margin-top: 38px; } .intro { font-size: 20px; } .facts { grid-template-columns: 1fr; }
+      .part { text-align: right; font-size: 14px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header><span class="brand">NEUFOLOGY</span><span class="part">DOCKER FOR BEGINNERS / PART 02</span></header>
+    <div class="status">App is running</div>
+    <h1>{{MESSAGE}}</h1>
+    <p class="intro">This page was served by a Node.js process inside your container.</p>
+    <div class="facts">
+      <div class="fact"><span class="label">Runtime</span><span class="value">Node.js</span></div>
+      <div class="fact"><span class="label">App port</span><span class="value">3000</span></div>
+      <div class="fact"><span class="label">Extra packages</span><span class="value">Zero</span></div>
+    </div>
+    <footer>From a Dockerfile to a running app. <strong>You built this.</strong></footer>
+  </main>
+</body>
+</html>
